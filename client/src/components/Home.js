@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Header } from 'semantic-ui-react';
+import { Header, Button } from 'semantic-ui-react';
 import { connect } from 'react-redux';
 import { getPosts, newPost } from '../actions/posts';
 
@@ -44,7 +44,7 @@ class Home extends Component {
               onChange={this.handleChange}
               value={this.state.body}
             />
-            <button type="submit">Add Post </button>
+            <Button color="blue" type="submit">Add Post </Button>
           </form>
         </div>
         <div>
@@ -53,8 +53,8 @@ class Home extends Component {
             <div>
               <h3>{p.title}</h3>
               <p>{p.body}</p>
-              <button> Edit Post </button>
-              <button> Delete Post </button>
+              <Button color="green"> Edit Post </Button>
+              <Button color="red"> Delete Post </Button>
             </div>
           )} )}
         </div>
